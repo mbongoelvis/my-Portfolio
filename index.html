@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./public/smallLogo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MbongoElvis</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/loadingio/transition.css@v2.0.0/dist/transition.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper w-full min-h-screen bg-main">
+      <!-- nav bar -->
+      <div class="sticky top-0 left-0 bg-white z-10">
+        <nav class="container px-2 lg:px-0 min-h-6 mx-auto flex items-center justify-between py-3">
+        <div class="logo">
+          <img src="./public/smallLogo.png" alt="Logo" class="lg:hidden cursor-pointer ld ld-blur-in">
+          <img src="./public/main logo.png" alt="Logo" class="hidden lg:block cursor-pointer ld ld-blur-in">
+        </div>
+        <!-- nav links -->
+        <div class="links gap-[4rem] hidden lg:flex">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Project</a>
+          <a href="./public/MBONGO Elvis M Web Developer +237671267490-4.pdf" download>Download CV</a>
+        </div>
+        <!-- let talk button -->
+        <button class="px-10 rounded-xl hidden lg:flex py-3 bg-black text-white ld ld-bounce-in">Let talk</button>
+        <!-- mobile manu -->
+        <div class="lg:hidden">
+          <div class="menu-btn lg:hidden flex flex-col gap-1 py-3 cursor-pointer">
+            <div class="bg-black w-8 h-1 rounded-xl top"></div>
+            <div class="bg-black w-8 h-1 rounded-xl middel"></div>
+            <div class="bg-black w-8 h-1 rounded-xl bottom"></div>
+          </div>
+        </div>
+      </nav>
+      </div>
+
+      <!-- hero section -->
+      <div class="w-full relative">
+        <p class="absolute text-[11.2vw] left-[2%] font-bold opacity-30">WEB DEVELOPER</p>
+        <img src="./public/Vector-dot.png" alt="" class="absolute left-[40%] lg:left-[40%] md:left-[70%] top-[60%]  ld ld-vortex-alt-in">
+        <img src="./public/Vector-square.png" alt="" class="absolute top-[40%] lg:top-[30%] lg:left-[55%] md:left-[80%]">
+        <img src="./public/shape5 1.png" alt="" class="absolute bottom-5 lg:top-[70%] md:bottom-[9rem]">
+        <section class="w-full min-h-[92vh] container mx-auto grid grid-cols-1 lg:grid-cols-2 ">
+        <div class="flex flex-col justify-center items-center lg:items-start h-full py-[7rem]">
+          <h1 class="text-[10vw] md:text-[6vw] lg:text-[3vw] font-bold">HI there,</h1>
+          <h1 class="text-[8vw] md:text-[6vw] lg:text-[3vw] lg:text-start text-center font-bold mb-5">Am called Mbongo elvis</h1>
+          <p class="text-[110%] md:[130%] text-center lg:text-start lg:text-2xl">I specialize in crafting immersive <br class="md:hidden lg:flex"> digital experiences that captivate <br> and engage individuals by seamlessly <br class="md:hidden lg:block"> integrating development and design.</p>
+        </div>
+        <div class="flex-1 relative overflow-hidden">
+          <img src="./public/me.png" class="min-w-[90%] lg:mt-[3rem]" alt="hero">
+        </div>
+      </section>
+      </div>
+
+      <!-- about me section -->
+      <div class="w-full h-screen">
+
+      </div>
+    </div>
+    <!-- js link -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script> 
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
