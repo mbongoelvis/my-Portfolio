@@ -8,7 +8,10 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+body{
+  cursor: pointer;
+  overflow: hidden;
+}
 .top, .middel, .bottom{
   transition: all .3s linear;
 }
@@ -21,24 +24,47 @@
 .bottom-active{
  transform: rotate(-50deg) translate(2px,-12px);
 }
+.links{
+  z-index: 10;
+}
 
 .links a{
   position: relative;
+  transition: all .3s linear;
 }
 .links a:hover{
   opacity: .8;
 }
-.links a::after{
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: black;
-  transform: scaleX(0);
-  transition: transform 0.3s;
+
+.hero-me{
+  filter: grayscale(80%);
 }
-.links a:hover::after {
-  transform: scaleX(1);
+.cursor{
+  inset: 0;
+  position: fixed;
+  z-index: -1;
+  backdrop-filter: blur(3px);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  width: 30px;
+  height: 30px;
+  border-radius: 500px;
+  border: 1px solid gray;
+  transition: transform .3s linear;
+  transform-origin: 100% 100%;
+}
+.link{
+  cursor: none;
+  padding: 0 1rem;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.cursor-grow{
+  transform: scale(2.5);
+  background-color: black;
+  border: none;
 }
