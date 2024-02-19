@@ -19,6 +19,7 @@ const hero = document.querySelector(".hero-me");
 const link = document.querySelectorAll(".link");
 const userDate = document.querySelector(".time")
 const dropdown = document.querySelector(".drop-down");
+const mobileLink = document.querySelectorAll(".mobile-link");
 
 // cursor
 const cursor = document.querySelector(".cursor");
@@ -64,3 +65,13 @@ menu.addEventListener("click", () => {
   middel.classList.toggle("middel-active");
   bottom.classList.toggle("bottom-active");
 });
+
+// mobile link clicks
+mobileLink.forEach((mobile) => {
+  mobile.addEventListener("click", () => {
+    top.classList.toggle("top-active");
+    dropdown.classList.toggle("mobile-drop");
+    middel.classList.toggle("middel-active");
+    bottom.classList.toggle("bottom-active");
+  })
+})

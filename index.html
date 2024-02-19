@@ -10,6 +10,8 @@
       href="https://cdn.jsdelivr.net/gh/loadingio/transition.css@v2.0.0/dist/transition.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+    <!-- tailwind links -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- google font link -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,7 +22,6 @@
   </head>
   <body>
     <div class="wrapper w-full min-h-screen bg-main">
-      
       <!-- nav bar -->
       <div class="sticky top-0 left-0 bg-white z-[2]">
         <nav
@@ -53,29 +54,41 @@
             <div class="cursor"></div>
           </div>
           <!-- let talk button -->
-          <a href="#lets-talk"
+          <a
+            href="#lets-talk"
             class="px-10 rounded-xl hidden lg:flex py-3 bg-black text-white ld ld-bounce-in"
           >
             Let talk
-        </a>
-
+          </a>
 
           <!-- mobile manu -->
-          <div class="z-10 relative">
-            <div class="menu-btn lg:hidden flex flex-col gap-1 py-3 cursor-pointer">
+          <div class="z-10 relative lg:hidden">
+            <div
+              class="menu-btn lg:hidden flex flex-col gap-1 py-3 cursor-pointer"
+            >
               <div class="bg-black w-8 h-1 rounded-xl top"></div>
               <div class="bg-black w-8 h-1 rounded-xl middel"></div>
               <div class="bg-black w-8 h-1 rounded-xl bottom"></div>
             </div>
           </div>
 
-          <div class="w-[100vw] lg:hidden absolute z-[100] left-0 top-[4rem] min-h-screen transition-all bg-white mobile-drop drop-down">
-
+          <div
+            class="w-[100vw] lg:hidden absolute z-[100] left-0 top-[4rem] min-h-screen transition-all bg-white mobile-drop drop-down flex items-center justify-center"
+          >
+            <div class="min-w-12 h-[40vh] flex flex-col gap-5 items-center text-3xl">
+              <a href="#" class="mobile-link">Home</a>
+              <a href="#about" class="mobile-link">About</a>
+              <a href="#" class="mobile-link">Project</a>
+              <a href="./public/MBONGO Elvis M Web Developer +237671267490-4.pdf" class="mobile-link" download >Download CV</a>
+              <!-- let talk button -->
+              <a href="#lets-talk" class="px-10 rounded-xl text-lg py-3 bg-black text-white ld ld-bounce-in mobile-link">
+                Let talk
+              </a>
+            </div>
           </div>
         </nav>
       </div>
 
-      
       <!-- hero section -->
       <div class="w-full relative">
         <p class="absolute text-[11.2vw] left-[2%] font-bold opacity-30">
@@ -148,13 +161,21 @@
           class="absolute -right-[30px] w-[45vw] lg:w-[25vw] lg:top-[12rem] top-[5rem]"
           alt=""
         />
-        <div class="container mx-auto min-h-12 mt-[12rem] grid lg:grid-cols-2 grid-cols-1">
+        <div
+          class="container mx-auto min-h-12 mt-[12rem] grid lg:grid-cols-2 grid-cols-1"
+        >
           <div class="mb-12 lg:mb-0 flex items-center justify-center">
             <img src="./public/sideImage.png" alt="" />
           </div>
           <div class="flex flex-col justify-center item-center min-h-12">
-            <h1 class="text-[15vw] md:text-[8vw] lg:text-[5vw] font-bold text-center lg:text-start">ABOUT ME</h1>
-            <p class="w-[90%] mx-auto lg:mx-0 lg:text-2xl leading-[25px] lg:leading-[40px] opacity-[.6] text-center lg:text-start pb-12 lg:pb-0">
+            <h1
+              class="text-[15vw] md:text-[8vw] lg:text-[5vw] font-bold text-center lg:text-start"
+            >
+              ABOUT ME
+            </h1>
+            <p
+              class="w-[90%] mx-auto lg:mx-0 lg:text-2xl leading-[25px] lg:leading-[40px] opacity-[.6] text-center lg:text-start pb-12 lg:pb-0"
+            >
               I am a developer based in Buea, Cameroon, with expertise in
               frontend development. I specialize in Developing, intuitive, and
               minimalistic designs for startups and small businesses to help
@@ -166,34 +187,85 @@
         </div>
       </div>
 
-
       <!-- services -->
       <div class="w-full min-h-screen">
         <div class="container mx-auto pt-[7rem] pl-2 lg:pl-0">
-          <h1 class="text-[15vw] md:text-[8vw] lg:text-[5vw] font-bold text-center lg:text-start">SERVICES</h1>
+          <h1
+            class="text-[15vw] md:text-[8vw] lg:text-[5vw] font-bold text-center lg:text-start"
+          >
+            SERVICES
+          </h1>
           <div class="grid grid-cols-1 gap-[5%] lg:grid-cols-2">
             <div>
               <h2 class="font-bold text-4xl my-4">My expertise</h2>
-              <p class="opacity-[.6] lg:text-2xl leading-[25px] md:leading-[30px] text-start">I focus on all things design and web related. With each of my services, my goal is to deliver an impactful and elevating digital experience for everyone.</p>
+              <p
+                class="opacity-[.6] lg:text-2xl leading-[25px] md:leading-[30px] text-start"
+              >
+                I focus on all things design and web related. With each of my
+                services, my goal is to deliver an impactful and elevating
+                digital experience for everyone.
+              </p>
             </div>
             <div>
-              <p class="opacity-[.6] font-bold lg:text-[3vw] md:text-[5vw] text-[7vw]">Frontend web development</p>
-              <p class="opacity-[.6] font-bold lg:text-[3vw] md:text-[5vw] text-[7vw]">Web Design</p>
-              <p class="opacity-[.6] font-bold lg:text-[3vw] md:text-[5vw] text-[7vw]">Responsive Web design</p>
+              <p
+                class="opacity-[.6] font-bold lg:text-[3vw] md:text-[5vw] text-[7vw]"
+              >
+                Frontend web development
+              </p>
+              <p
+                class="opacity-[.6] font-bold lg:text-[3vw] md:text-[5vw] text-[7vw]"
+              >
+                Web Design
+              </p>
+              <p
+                class="opacity-[.6] font-bold lg:text-[3vw] md:text-[5vw] text-[7vw]"
+              >
+                Responsive Web design
+              </p>
             </div>
           </div>
           <div class="grid grid-cols-1 gap-[5%] lg:grid-cols-2 mt-12">
             <div>
               <h2 class="font-bold text-4xl my-4">My Digital Tool Box</h2>
-              <p class="opacity-[.6] lg:text-2xl leading-[25px] md:leading-[30px] text-start">These are my go to tech stack to make any projects happen. I am always eager of learning more about my current stack, and new technologies that could expand my horizons.</p>
+              <p
+                class="opacity-[.6] lg:text-2xl leading-[25px] md:leading-[30px] text-start"
+              >
+                These are my go to tech stack to make any projects happen. I am
+                always eager of learning more about my current stack, and new
+                technologies that could expand my horizons.
+              </p>
             </div>
             <div>
-              <p class="opacity-[.6] font-bold lg:text-[3vw] md:text-[5vw] text-[7vw]">HTML</p>
-              <p class="opacity-[.6] font-bold lg:text-[3vw] md:text-[5vw] text-[7vw]">CSS</p>
-              <p class="opacity-[.6] font-bold lg:text-[3vw] md:text-[5vw] text-[7vw]">JAVASCRIPT</p>
-              <p class="opacity-[.6] font-bold lg:text-[3vw] md:text-[5vw] text-[7vw]">TAILWIND</p>
-              <p class="opacity-[.6] font-bold lg:text-[3vw] md:text-[5vw] text-[7vw]">REACT.JS</p>
-              <p class="opacity-[.6] font-bold lg:text-[3vw] md:text-[5vw] text-[7vw]">NODEJS</p>
+              <p
+                class="opacity-[.6] font-bold lg:text-[3vw] md:text-[5vw] text-[7vw]"
+              >
+                HTML
+              </p>
+              <p
+                class="opacity-[.6] font-bold lg:text-[3vw] md:text-[5vw] text-[7vw]"
+              >
+                CSS
+              </p>
+              <p
+                class="opacity-[.6] font-bold lg:text-[3vw] md:text-[5vw] text-[7vw]"
+              >
+                JAVASCRIPT
+              </p>
+              <p
+                class="opacity-[.6] font-bold lg:text-[3vw] md:text-[5vw] text-[7vw]"
+              >
+                TAILWIND
+              </p>
+              <p
+                class="opacity-[.6] font-bold lg:text-[3vw] md:text-[5vw] text-[7vw]"
+              >
+                REACT.JS
+              </p>
+              <p
+                class="opacity-[.6] font-bold lg:text-[3vw] md:text-[5vw] text-[7vw]"
+              >
+                NODEJS
+              </p>
             </div>
           </div>
         </div>
@@ -201,63 +273,113 @@
 
       <!-- contact section -->
       <div class="w-full min-h-screen" id="lets-talk">
-        <div class="container mx-auto mt-[10rem] flex flex-col lg:flex-row gap-12 px-2">
-         <div class="w-full lg:w-[70%] h-full">
-           <p class="text-[10vw] md:text-[8vw] lg:text-[5vw] font-bold text-start">CONTACT ME</p>
-          <p class="font-bold text-xl md:text-4xl">Do you have an awesome idea?</p>
-          <p class="font-bold text-xl md:text-4xl mt-2">Lest's bring it to life</p>
-          <p class="opacity-[.6] lg:text-2xl leading-[25px] md:leading-[30px] text-start mt-3">Am available for both freelance and full time jobs, so just contact me for any!</p>
-          <form class="w-full mt-12">
-            <div class="flex flex-col lg:flex-row w-full gap-3">
-              <div class="lg:w-1/2 w-full min-h-12">
-             <label class="block">Name</label>
-                <input class="w-full h-12 border-b-2 text-lg outline-none" type="text" placeholder="Enter your name here" id="name" required>
+        <div
+          class="container mx-auto mt-[10rem] flex flex-col lg:flex-row gap-12 px-2"
+        >
+          <div class="w-full lg:w-[70%] h-full">
+            <p
+              class="text-[10vw] md:text-[8vw] lg:text-[5vw] font-bold text-start"
+            >
+              CONTACT ME
+            </p>
+            <p class="font-bold text-xl md:text-4xl">
+              Do you have an awesome idea?
+            </p>
+            <p class="font-bold text-xl md:text-4xl mt-2">
+              Lest's bring it to life
+            </p>
+            <p
+              class="opacity-[.6] lg:text-2xl leading-[25px] md:leading-[30px] text-start mt-3"
+            >
+              Am available for both freelance and full time jobs, so just
+              contact me for any!
+            </p>
+            <form class="w-full mt-12">
+              <div class="flex flex-col lg:flex-row w-full gap-3">
+                <div class="lg:w-1/2 w-full min-h-12">
+                  <label class="block">Name</label>
+                  <input
+                    class="w-full h-12 border-b-2 text-lg outline-none"
+                    type="text"
+                    placeholder="Enter your name here"
+                    id="name"
+                    required
+                  />
+                </div>
+                <div class="lg:w-1/2 w-full">
+                  <label class="block">Email</label>
+                  <input
+                    class="w-full h-12 border-b-2 text-lg outline-none"
+                    placeholder="Enter your email here"
+                    type="email"
+                    id="email"
+                    required
+                  />
+                </div>
               </div>
-              <div class="lg:w-1/2 w-full">
-                <label class="block">Email</label>
-                <input class="w-full h-12 border-b-2 text-lg outline-none" placeholder="Enter your email here" type="email" id="email" required>
+              <div class="mt-12">
+                <label class="block">Message</label>
+                <textarea
+                  class="mt-3 outline-none border-b-2 w-full"
+                  id="message"
+                  placeholder="Enter message here"
+                  id=""
+                  cols="30"
+                  rows="10"
+                ></textarea>
               </div>
-            </div>
-            <div class="mt-12">
-              <label class="block">Message</label>
-              <textarea class="mt-3 outline-none border-b-2  w-full" id="message" placeholder="Enter message here" id="" cols="30" rows="10"></textarea>
-            </div>
-            <button class="bg-black text-white px-8 py-4 rounded-3xl mt-4" onclick="sendMessage()">Send Message</button>
-          </form>
-         </div>
-         <div class="w-full lg:w-[20%] h-full flex flex-col gap-[5rem]">
-          <div>
-            <h2 class="text-3xl font-bold">Contact Details</h2>
-            <p class="mt-3 text-xl opacity-[.6]">mbongombongo4@gmail.com</p>
-            <p class="mt-3 text-xl opacity-[.6]">+237671267490</p>
+              <button
+                class="bg-black text-white px-8 py-4 rounded-3xl mt-4"
+                onclick="sendMessage()"
+              >
+                Send Message
+              </button>
+            </form>
           </div>
-          <div>
-            <h2 class="text-3xl font-bold mb-4">Socials</h2>
-            <a href="https://wa.me/qr/SWSUG2LUZJCFG1" target="_blank" class="flex items-center gap-2 mb-5">
-              <img src="./public/whatsapp.png" class="w-6" alt="">
-              <p>Whatsapp</p>
-            </a>
-            <a href="#" target="_blank" class="flex items-center gap-2 mb-5">
-              <img src="./public/instagram(1).png" class="w-6" alt="">
-              <p>Instagram</p>
-            </a>
-            <a href="https://github.com/mbongoelvis" target="_blank" class="flex items-center gap-2 mb-5">
-              <img src="./public/github(1).png" class="w-6" alt="">
-              <p>Github</p>
-            </a>
-            <a href="https://www.linkedin.com/in/mbongo-elvis/" target="_blank" class="flex items-center gap-2">
-              <img src="./public/linkedin(1).png" class="w-6" alt="">
-              <p>LinkedIn</p>
-            </a>
-          </div>
-          <div>
-            <h2 class="text-3xl font-bold mb-4">Location</h2>
-            <p class="mt-3 text-xl opacity-[.6]">SouthWest, Cameroon</p>
-            <p class="mt-3 text-xl opacity-[.6] time">12:45 PM</p>
+          <div class="w-full lg:w-[20%] h-full flex flex-col gap-[5rem]">
+            <div>
+              <h2 class="text-3xl font-bold">Contact Details</h2>
+              <p class="mt-3 text-xl opacity-[.6]">mbongombongo4@gmail.com</p>
+              <p class="mt-3 text-xl opacity-[.6]">+237671267490</p>
+            </div>
+            <div>
+              <h2 class="text-3xl font-bold mb-4">Socials</h2>
+              <a
+                href="https://wa.me/qr/SWSUG2LUZJCFG1"
+                target="_blank"
+                class="flex items-center gap-2 mb-5"
+              >
+                <img src="./public/whatsapp.png" class="w-6" alt="" />
+                <p>Whatsapp</p>
+              </a>
+              <a href="#" target="_blank" class="flex items-center gap-2 mb-5">
+                <img src="./public/instagram(1).png" class="w-6" alt="" />
+                <p>Instagram</p>
+              </a>
+              <a
+                href="https://github.com/mbongoelvis"
+                target="_blank"
+                class="flex items-center gap-2 mb-5"
+              >
+                <img src="./public/github(1).png" class="w-6" alt="" />
+                <p>Github</p>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/mbongo-elvis/"
+                target="_blank"
+                class="flex items-center gap-2"
+              >
+                <img src="./public/linkedin(1).png" class="w-6" alt="" />
+                <p>LinkedIn</p>
+              </a>
+            </div>
+            <div>
+              <h2 class="text-3xl font-bold mb-4">Location</h2>
+              <p class="mt-3 text-xl opacity-[.6]">SouthWest, Cameroon</p>
+              <p class="mt-3 text-xl opacity-[.6] time">12:45 PM</p>
+            </div>
           </div>
         </div>
-        </div>
-        
       </div>
     </div>
     <!-- js link -->
