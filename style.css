@@ -68,3 +68,7 @@ body{
   background-color: black;
   border: none;
 }
+.mobile-drop{
+  scale: 0;
+  transform-origin: top;
+}

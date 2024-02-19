@@ -17,9 +17,20 @@ const middel = document.querySelector(".middel");
 const bottom = document.querySelector(".bottom");
 const hero = document.querySelector(".hero-me");
 const link = document.querySelectorAll(".link");
+const userDate = document.querySelector(".time")
+const dropdown = document.querySelector(".drop-down");
 
 // cursor
 const cursor = document.querySelector(".cursor");
+
+// getting user data
+let date = new Date();
+userDate.innerHTML =
+  date.getHours() > 12
+    ? date.getHours() + ":" + date.getMinutes() + " " + "PM"
+    : date.getHours() + ":" + date.getMinutes() + " " + "AM";
+
+console.log(date.getHours() + ":" + date.getMinutes())
 
 document.addEventListener("mousemove", (e) => { 
   cursor.style.left = e.clientX + "px";
@@ -49,6 +60,7 @@ hero.addEventListener("mouseover", () => {
 menu.addEventListener("click", () => {
   console.log("clicked");
   top.classList.toggle("top-active");
+  dropdown.classList.toggle("mobile-drop");
   middel.classList.toggle("middel-active");
   bottom.classList.toggle("bottom-active");
 });
